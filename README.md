@@ -6,6 +6,8 @@
 
 # Method Details
 
+The proposed PinNet is an advanced polyphase integration network for for cutaneous carcinoma segmentation. This network combines Morpho-Spectral Harmonic Layer(MSHL) to extract multi-scale bi-domain features and the Dual-perspective attention module(DBAM) for the model’s lesion detail capture as shown in Figure 1. Empirical evaluations conducted on two public datasets ISIC2017 and ISIC2018 demonstrate that PinNet surpassing multiple existing State-of-the-Art (SoTA) methodologies while substantially reducing parameter size to 50KB and computational complexity to 0.068 GFLOPs.
+
 <div align=left>
   <img src="https://github.com/IMOP-lab/PinNet/blob/main/figures/overall.png"width=100% height=100%>
 </div>
@@ -20,10 +22,7 @@
   Figure 2: The structure of the Morpho Spectral Harmonic Layer (MSHL).
 </p>
 
-
-The proposed PinNet is an advanced polyphase integration network for for skin cancer segmentation. This network combines Morpho-Spectral Harmonic Layer(MSHL) to extract multi-scale bi-domain features and the Dual-perspective attention module(DBAM) for the model’s lesion detail capture. Empirical evaluations conducted on two public datasets ISIC2017 and ISIC2018 demonstrate that PinNet surpassing multiple existing State-of-the-Art (SoTA) methodologies while substantially reducing parameter size to 50KB and computational complexity to 0.068 GFLOPs.
-
-We will first introduce our method and underlying principles, explaining how PinNet uses multi-scale bi-domain features and attention mechanisms to improve feature extraction from skin cancer images. Next, we provide details on the experimental setup, performance metrics, and GitHub links to previous methods used for comparison. Finally, we present the experimental results, showing how PinNet achieves high performance across multiple datasets.
+We will first introduce our method and underlying principles, explaining how PinNet uses multi-scale bi-domain features and attention mechanisms to improve feature extraction from cutaneous carcinoma images. Next, we provide details on the experimental setup, performance metrics, and GitHub links to previous methods used for comparison. Finally, we present the experimental results, showing how PinNet achieves high performance across multiple datasets.
 
 ## Installation
 We run PinNet and previous methods on a system running Ubuntu 20.04, with Python 3.8, PyTorch 1.11.0, and CUDA 11.3.
@@ -36,14 +35,14 @@ We run PinNet and previous methods on a system running Ubuntu 20.04, with Python
   <img src="https://github.com/IMOP-lab/PinNet/blob/main/tables/ISIC2017_compare.png">
 </div>
 <p align=left>
-  Figure 3: Comparison of skin cancer segmentation performance between PinNet and other methods on the ISIC2017 dataset.
+  Figure 3: Comparison of cutaneous carcinoma segmentation performance between PinNet and other methods on the ISIC2017 dataset.
 </p>
 
 <div align=left>
   <img src="https://github.com/IMOP-lab/PinNet/blob/main/tables/ISIC2018_compare.png">
 </div>
 <p align=left>
-  Figure 4: Comparison of skin cancer segmentation performance between PinNet and other methods on the ISIC2018 dataset.
+  Figure 4: Comparison of cutaneous carcinoma segmentation performance between PinNet and other methods on the ISIC2018 dataset.
 </p>
 
 Our method achieves a best-in-class performance-to-size ratio, surpassing existing lightweight models on both the ISIC2017 and ISIC2018 datasets with minimal computational overhead.
@@ -55,7 +54,7 @@ Our method achieves a best-in-class performance-to-size ratio, surpassing existi
   Figure 5: Prediction results of different models: (a) Original image, (b) PinNet, (c) EGEUNet, (d) ULite, (e) MALUNet, (f) UNeXt, (g)
 CPFNet, (h) ResUNet++, (i) ResUNet, (j) Att-UNet, and (k) UNet. The red line marks the boundary of the ground truth labels, while the
 green regions represent the predictions of the models. As shown in the figure, our model achieves prediction results closer to the ground
-truth labels in the context of different challenges in skin cancer lesion areas compared to other models.
+truth labels in the context of different challenges in cutaneous carcinoma lesion areas compared to other models.
 </p>
 
 
