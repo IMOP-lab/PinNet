@@ -4,7 +4,14 @@
   <img src="https://github.com/IMOP-lab/PinNet/blob/main/figures/overall.png"width=100% height=100%>
 </div>
 <p align=left>
-  Figure 1: Detailed network structure of our proposed PinNet and DBAM.
+  Figure 1: The overall structure of PinNet (left) and the detailed structure of DBAM (right).
+</p>
+
+<div align=left>
+  <img src="https://github.com/IMOP-lab/PinNet/blob/main/figures/mshl.png"width=100% height=100%>
+</div>
+<p align=left>
+  Figure 2: The structure of the Morpho Spectral Harmonic Layer (MSHL).
 </p>
 
 
