@@ -1,6 +1,6 @@
 # Edge-Optimized Cutaneous Carcinoma Detection via Polyphase Lightweight Integration
 
-### Official code implementation of Volumetric Axial Disentanglement
+### Official code implementation of PinNet
 
 ### [Project page](https://github.com/IMOP-lab/PinNet) | [Our laboratory home page](https://github.com/IMOP-lab)
 
