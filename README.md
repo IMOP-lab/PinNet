@@ -1,4 +1,4 @@
-# PinNet: Polyphase Integration Network for skin cancer image segmentation
+# Edge-Optimized Cutaneous Carcinoma Detection via Polyphase Lightweight Integration
 
 <div align=left>
   <img src="https://github.com/IMOP-lab/PinNet/blob/main/figures/overall.png"width=100% height=100%>
