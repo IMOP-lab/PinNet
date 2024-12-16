@@ -18,3 +18,10 @@
 The proposed PinNet is an advanced polyphase integration network for for skin cancer segmentation. This network combines Morpho-Spectral Harmonic Layer(MSHL) to extract multi-scale bi-domain features and the Dual-perspective attention module(DBAM) for the model’s lesion detail capture. Empirical evaluations conducted on two public datasets ISIC2017 and ISIC2018 demonstrate that PinNet surpassing multiple existing State-of-the-Art (SoTA) methodologies while substantially reducing parameter size to 50KB and computational complexity to 0.068 GFLOPs.
 
 We will first introduce our method and underlying principles, explaining how PinNet uses multi-scale bi-domain features and attention mechanisms to improve feature extraction from skin cancer images. Next, we provide details on the experimental setup, performance metrics, and GitHub links to previous methods used for comparison. Finally, we present the experimental results, showing how PinNet achieves high performance across multiple datasets.
+
+## Installation
+We run PinNet and previous methods on a system running Ubuntu 20.04, with Python 3.8, PyTorch 1.11.0, and CUDA 11.3.
+
+## Experiment
+
+### Compare with others on the ISIC2017 and ISIC2018 dataset
