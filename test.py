@@ -5,7 +5,6 @@ from torch.utils.data import DataLoader
 from loader import *
 from models.model import PinNet
 from engine import *
-#from models.malunet import MALUNet
 import os
 import sys
 os.environ["CUDA_VISIBLE_DEVICES"] = "0" # "0, 1, 2, 3"
