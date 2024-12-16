@@ -25,3 +25,40 @@ We run PinNet and previous methods on a system running Ubuntu 20.04, with Python
 ## Experiment
 
 ### Compare with others on the ISIC2017 and ISIC2018 dataset
+
+<div align=left>
+  <img src="https://github.com/IMOP-lab/PinNet/blob/main/tables/ISIC2017_compare.png">
+</div>
+<p align=left>
+  Figure 3: Comparison of skin cancer segmentation performance between PinNet and other methods on the ISIC2017 dataset.
+</p>
+
+<div align=left>
+  <img src="https://github.com/IMOP-lab/PinNet/blob/main/tables/ISIC2018_compare.png">
+</div>
+<p align=left>
+  Figure 4: Comparison of skin cancer segmentation performance between PinNet and other methods on the ISIC2018 dataset.
+</p>
+
+Our method achieves a best-in-class performance-to-size ratio, surpassing existing lightweight models on both the ISIC2017 and ISIC2018 datasets with minimal computational overhead.
+
+### Ablation study
+
+#### Modelwise Ablation
+<div align=left>
+  <img src="https://github.com/IMOP-lab/PinNet/blob/main/tables/Modelwise ablation.png">
+</div>
+<p align=left>
+  Figure 5: Comparison of skin cancer segmentation performance between PinNet and other methods on the ISIC2018 dataset.
+</p>
+
+
+
+
+
+
+
+
+
+
+
