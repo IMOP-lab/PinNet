@@ -6,7 +6,7 @@
 
 # Method Details
 
-The proposed PinNet is an advanced polyphase integration network for for cutaneous carcinoma segmentation. This network combines Morpho-Spectral Harmonic Layer(MSHL) to extract multi-scale bi-domain features and the Dual-perspective attention module(DBAM) for the model’s lesion detail capture as shown in Figure 1. Empirical evaluations conducted on two public datasets ISIC2017 and ISIC2018 demonstrate that PinNet surpassing multiple existing State-of-the-Art (SoTA) methodologies while substantially reducing parameter size to 50KB and computational complexity to 0.068 GFLOPs.
+The proposed PinNet is an advanced lightweight polyphase integration network for for cutaneous carcinoma segmentation. This network combines Morpho-Spectral Harmonic Layer(MSHL) to extract multi-scale bi-domain features and the Dual-perspective attention module(DBAM) for the model’s lesion detail capture as shown in Figure 1. Empirical evaluations conducted on two public datasets ISIC2017 and ISIC2018 demonstrate that PinNet surpassing multiple existing State-of-the-Art (SoTA) methodologies while substantially reducing parameter size to 50KB and computational complexity to 0.068 GFLOPs.
 
 <div align=left>
   <img src="https://github.com/IMOP-lab/PinNet/blob/main/figures/overall.png"width=100% height=100%>
