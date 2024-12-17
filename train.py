@@ -4,11 +4,6 @@ from torch.amp import autocast, GradScaler
 from torch.utils.data import DataLoader
 from loader import *
 from models.model import PinNet
-
-
-
-
-
 from engine import *
 import os
 import sys
