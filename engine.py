@@ -104,7 +104,6 @@ def val_one_epoch(test_loader,
     
     return np.mean(loss_list)
 
-"""
 def test_one_epoch(test_loader,
                     model,
                     criterion,
@@ -156,65 +155,3 @@ def test_one_epoch(test_loader,
         logger.info(log_info)
 
     return np.mean(loss_list)
-    """
-def test_one_epoch(test_loader, model, criterion, logger, config, test_data_name=None):
-    # switch to evaluate mode
-    model.eval()
-    preds = []
-    gts = []
-    loss_list = []
-    metrics = {
-        "accuracy": [],
-        "sensitivity": [],
-        "specificity": [],
-        "f1_or_dsc": [],
-        "miou": []
-    }
-
-    with torch.no_grad():
-        for i, data in enumerate(tqdm(test_loader)):
-            img, msk = data
-            img, msk = img.cuda(non_blocking=True).float(), msk.cuda(non_blocking=True).float()
-            out = model(img)
-            loss = criterion(out, msk)
-            loss_list.append(loss.item())
-            msk = msk.squeeze(1).cpu().detach().numpy()
-            gts.append(msk)
-            if type(out) is tuple:
-                out = out[0]
-            out = out.squeeze(1).cpu().detach().numpy()
-            preds.append(out) 
-
-            y_pre = np.where(out >= config.threshold, 1, 0)
-            y_true = np.where(msk >= 0.5, 1, 0)
-
-            confusion = confusion_matrix(y_true, y_pre)
-            TN, FP, FN, TP = confusion.ravel() if confusion.size == 4 else (0, 0, 0, 0)
-
-            accuracy = (TN + TP) / np.sum(confusion) if np.sum(confusion) != 0 else 0
-            sensitivity = TP / (TP + FN) if TP + FN != 0 else 0
-            specificity = TN / (TN + FP) if TN + FP != 0 else 0
-            f1_or_dsc = (2 * TP) / (2 * TP + FP + FN) if 2 * TP + FP + FN != 0 else 0
-            miou = TP / (TP + FP + FN) if TP + FP + FN != 0 else 0
-
-            # Collect metrics for each batch
-            metrics["accuracy"].append(accuracy)
-            metrics["sensitivity"].append(sensitivity)
-            metrics["specificity"].append(specificity)
-            metrics["f1_or_dsc"].append(f1_or_dsc)
-            metrics["miou"].append(miou)
-
-        # Calculate mean and standard deviation of metrics
-        final_metrics = {metric: (np.mean(values), np.std(values)) for metric, values in metrics.items()}
-        loss_mean, loss_std = np.mean(loss_list), np.std(loss_list)
-
-        if test_data_name is not None:
-            log_info = f'Test Data Set: {test_data_name}'
-            print(log_info)
-            logger.info(log_info)
-
-        log_info = f'Test of best model, Mean Loss: {loss_mean:.4f}, Loss Std: {loss_std:.4f}, Metrics: {final_metrics}'
-        print(log_info)
-        logger.info(log_info)
-
-    return loss_mean, loss_std, final_metrics
